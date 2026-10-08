@@ -345,6 +345,6 @@
    real "Install app" instead of only "create shortcut". See sw.js. */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
+    navigator.serviceWorker.register('./sw.js').catch(function () {});
   });
 }
