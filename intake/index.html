@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
+<title>Intake Form | CPT MMA, Combat &amp; Performance Training</title>
+<meta name="description" content="Register your interest in training at CPT MMA in Melbourne. Tell Sotir your goal and he will be in touch about a trial session.">
+<meta property="og:title" content="Intake Form | CPT MMA">
+<meta property="og:description" content="Finding out more about you so we may be better prepared and customise our movement assessments to the individual.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cptmma.com/assets/img/og/home.png">
+<meta property="og:site_name" content="CPT MMA">
+<meta name="theme-color" content="#080a09">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/cpt-favicon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CPT MMA">
+<meta name="application-name" content="CPT MMA">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sk.css?v=16">
+<script>if(!/[?&]reveal=1/.test(location.search))document.documentElement.classList.add('js')</script>
+<meta name="twitter:image" content="https://cptmma.com/assets/img/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://cptmma.com/intake#page","url":"https://cptmma.com/intake","name":"CPT MMA Intake Form","description":"First time client intake questionnaire for Combat and Performance Training with Sotir Kichukov in Melbourne.","isPartOf":{"@id":"https://cptmma.com/#website"},"about":{"@id":"https://cptmma.com/#business"}}</script>
+
+<style>
+/* ===== Intake page — scoped so nothing else on the site is touched ===== */
+.ipage{padding:126px 0 90px;position:relative}
+.ipage::before{content:"";position:absolute;inset:0 0 auto;height:420px;
+  background:radial-gradient(80% 100% at 50% 0,rgba(31,209,95,.13),transparent 70%);pointer-events:none;z-index:1}
+/* Sotir fighting behind the form: fixed so it stays put while the long form scrolls,
+   knocked well back so nothing on the card loses contrast */
+.ibg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.ibg video{width:100%;height:100%;object-fit:cover;object-position:58% 28%;opacity:.26}
+.ibg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(6,8,7,.86) 0%,rgba(6,8,7,.72) 30%,rgba(6,8,7,.9) 100%),
+  radial-gradient(70% 60% at 50% 40%,transparent,rgba(6,8,7,.72) 100%)}
+.ipage .wrap{position:relative;z-index:2}
+.ihead{max-width:820px;margin:0 auto 40px;position:relative;text-align:center}
+.ihead h1{font-family:var(--f-disp);font-size:clamp(38px,7vw,72px);line-height:.94;letter-spacing:-.01em;margin:0 0 16px}
+.ihead .lead{color:var(--soft);font-size:clamp(15.5px,2vw,18px);line-height:1.62;max-width:62ch;margin:0 auto}
+.ihead .rule{width:96px;height:3px;margin:24px auto 0;
+  background:linear-gradient(90deg,var(--red),var(--green));border-radius:3px}
+
+.ifm{max-width:820px;margin:0 auto;position:relative}
+.iset{border:1px solid var(--line2);border-radius:16px;background:linear-gradient(180deg,var(--panel),var(--panel2));
+  padding:30px 26px 10px;margin:0 0 20px;position:relative;overflow:hidden}
+.iset::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--red),var(--green));opacity:.55}
+/* a <legend> renders on the fieldset border box by default, which dropped the section
+   title on top of the card edge and the gradient rule. Floating it full width takes it
+   out of that special layout and puts it inside the padding like a normal heading. */
+.iset > legend,.iset > .lg{float:left;width:100%;font-family:var(--f-cond);text-transform:uppercase;
+  letter-spacing:.16em;font-size:19px;color:var(--green);font-weight:700;margin:0 0 8px;padding:0}
+.iset .sub{clear:both;color:var(--dim);font-size:13.5px;margin:0 0 20px;line-height:1.55}
+
+.iq{margin:0 0 22px}
+.iq > label,.iq > .ql{display:block;font-size:15px;line-height:1.5;color:var(--bone);margin:0 0 10px;font-weight:500}
+.iq .req{color:var(--red);margin-left:3px}
+.iq .hint{display:block;color:var(--dim);font-size:13px;margin-top:4px;font-weight:400}
+
+.iq input[type=text],.iq input[type=email],.iq input[type=tel],.iq input[type=date],
+.iq input[type=number],.iq select,.iq textarea{
+  width:100%;padding:13px 15px;border-radius:11px;border:1px solid var(--line2);
+  background:rgba(255,255,255,.035);color:var(--bone);font:inherit;font-size:15px;
+  transition:border-color .2s,box-shadow .2s}
+.iq textarea{min-height:96px;resize:vertical;line-height:1.55}
+/* Phone standard: iOS zooms the page when a focused field is under 16px and an
+   older iPhone never zooms back out, so the whole intake form stays magnified. */
+@media(max-width:680px){
+  .iq input[type=text],.iq input[type=email],.iq input[type=tel],.iq input[type=date],
+  .iq input[type=number],.iq select,.iq textarea{font-size:16px}
+}
+.iq input:focus,.iq select:focus,.iq textarea:focus{
+  outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-glow)}
+.iq input::placeholder,.iq textarea::placeholder{color:#5c6763}
+.iq select{appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231fd15f' stroke-width='2.4'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:44px}
+.iq select option{background:#0e1211;color:#eef2f0}
+
+/* Yes / No and multi choice pills */
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:0;height:0}
+.opt span{display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border-radius:999px;
+  border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--soft);
+  font-size:14.5px;cursor:pointer;transition:.2s var(--ease);user-select:none}
+.opt span::before{content:"";width:15px;height:15px;border-radius:50%;
+  border:1.5px solid var(--line2);flex:none;transition:.2s}
+.opt input[type=checkbox]+span::before{border-radius:5px}
+.opt span:hover{border-color:var(--green);color:var(--bone)}
+.opt input:checked+span{border-color:var(--green);color:var(--bone);background:rgba(31,209,95,.11)}
+.opt input:checked+span::before{border-color:var(--green);background:var(--green);
+  box-shadow:inset 0 0 0 3px #0e1211}
+.opt input:focus-visible+span{outline:2px solid var(--green);outline-offset:3px}
+
+/* 1 to 10 scale */
+.scale{display:flex;flex-wrap:wrap;gap:7px}
+.scale .opt span{width:42px;height:42px;padding:0;justify-content:center;border-radius:11px;font-weight:600}
+.scale .opt span::before{display:none}
+.scale-ends{display:flex;justify-content:space-between;color:var(--dim);font-size:12.5px;margin-top:9px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+
+/* File upload */
+.drop{border:1.5px dashed var(--line2);border-radius:14px;padding:26px 20px;text-align:center;
+  cursor:pointer;transition:.2s;background:rgba(255,255,255,.02)}
+.drop:hover,.drop.over{border-color:var(--green);background:rgba(31,209,95,.06)}
+.drop svg{width:28px;height:28px;color:var(--green);margin-bottom:8px}
+.drop b{display:block;color:var(--bone);font-size:14.5px;margin-bottom:4px}
+.drop small{color:var(--dim);font-size:12.5px;line-height:1.5;display:block}
+.drop input{display:none}
+.filelist{margin-top:12px;display:flex;flex-direction:column;gap:7px}
+.filerow{display:flex;align-items:center;gap:10px;padding:9px 13px;border-radius:10px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line2);font-size:13.5px;color:var(--soft)}
+.filerow b{color:var(--bone);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.filerow button{background:none;border:0;color:var(--red);cursor:pointer;font-size:19px;line-height:1;padding:0 2px}
+
+.iconsent{display:flex;gap:12px;align-items:flex-start;margin:0 0 22px}
+.iconsent input{margin-top:3px;width:17px;height:17px;accent-color:var(--green);flex:none;cursor:pointer}
+.iconsent label{color:var(--soft);font-size:14.5px;line-height:1.55;cursor:pointer}
+
+.isubmit{margin-top:8px}
+.ierr{display:none;color:var(--red);font-size:14px;margin-bottom:14px;padding:12px 15px;
+  border-radius:11px;background:rgba(229,35,27,.09);border:1px solid rgba(229,35,27,.3)}
+.ierr.on{display:block}
+.inote{color:var(--dim);font-size:13px;margin-top:16px;line-height:1.6}
+
+.idone{display:none;text-align:center;padding:60px 26px;border:1px solid var(--line2);
+  border-radius:18px;background:linear-gradient(180deg,var(--panel),var(--panel2))}
+.idone.on{display:block}
+.ifm.sent .iform{display:none}
+.idone .ico{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;
+  background:radial-gradient(circle,var(--green-deep),transparent);display:flex;align-items:center;justify-content:center}
+.idone .ico svg{width:34px;height:34px;color:var(--green)}
+.idone h2{font-family:var(--f-disp);font-size:clamp(28px,5vw,42px);margin:0 0 12px}
+.idone p{color:var(--soft);max-width:46ch;margin:0 auto 8px;line-height:1.65}
+</style>
+<link rel="canonical" href="https://cptmma.com/intake" data-seo="sx">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" data-seo="sx">
+<meta property="og:url" content="https://cptmma.com/intake" data-seo="sx">
+<meta name="twitter:title" content="Intake Form | CPT MMA, Combat &amp; Performance Training" data-seo="sx">
+<meta name="twitter:description" content="Register your interest in training at CPT MMA in Melbourne. Tell Sotir your goal and he will be in touch about a trial session." data-seo="sx">
+<meta property="og:locale" content="en_AU" data-seo="sx">
+<script type="application/ld+json" data-seo="sx">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://cptmma.com/intake#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cptmma.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Register",
+          "item": "https://cptmma.com/intake"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cptmma.com/intake#page",
+      "url": "https://cptmma.com/intake",
+      "name": "Intake Form | CPT MMA, Combat & Performance Training",
+      "isPartOf": {
+        "@id": "https://cptmma.com/#website"
+      },
+      "about": {
+        "@id": "https://cptmma.com/#business"
+      }
+    }
+  ]
+}
+</script>
+<style>:root{--sc-b:3f194688}</style>
+
+</head>
+<body data-sc="3f194688">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="bar">
+    <a class="brand" href="/" aria-label="CPT MMA home">
+      <img loading="lazy" decoding="async" class="mark" src="/assets/img/cpt-mark.png" width="235" height="277" alt="" aria-hidden="true"><span class="wm">CPT MMA<small>Combat &amp; Performance</small></span>
+    </a>
+    <nav>
+      <a href="/#coach">Coach</a>
+      <a href="/#training">Training</a>
+      <a href="/#canine">Canine</a>
+      <a href="/#membership">Membership</a>
+      <a href="/#reviews">Reviews</a>
+      <a href="/blog">Journal</a>
+      <a href="/intake" aria-current="page">Intake</a>
+    </nav>
+    <a class="btn btn-primary cta" href="/#apply">Register interest</a>
+    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobmenu" role="dialog" aria-label="Menu">
+  <button class="mclose" aria-label="Close">&times;</button>
+  <a href="/#coach">Coach</a>
+  <a href="/#training">Training</a>
+  <a href="/#canine">Canine</a>
+  <a href="/#membership">Membership</a>
+  <a href="/#reviews">Reviews</a>
+  <a href="/blog">Journal</a>
+  <a href="/intake">Intake</a>
+  <a href="/#apply">Register interest</a>
+  <div class="socials mob-socials">
+    <a href="https://www.facebook.com/ProFighterAndCoach" target="_blank" rel="noopener" aria-label="Sotir Kichukov on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.55c0-.93.26-1.56 1.59-1.56h1.7V3.13A22.7 22.7 0 0 0 14.31 3c-2.46 0-4.14 1.5-4.14 4.25V9.6H7.4v3.2h2.77V21h3.33z"/></svg></a>
+    <a href="https://www.instagram.com/sotir_kichukov/" target="_blank" rel="noopener" aria-label="Sotir Kichukov on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.4"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://www.tiktok.com/@sotir_kichukov" target="_blank" rel="noopener" aria-label="Sotir Kichukov on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3.02v12.2a2.36 2.36 0 1 1-1.9-2.31V8.83a5.6 5.6 0 1 0 4.93 5.56V8.9a6.66 6.66 0 0 0 3.87 1.24V7.12A3.85 3.85 0 0 1 16.5 2z"/></svg></a>
+  </div>
+</div>
+
+<!-- ===== INTAKE ===== -->
+<section class="ipage">
+  <div class="ibg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto" poster="/assets/img/hero-walkout-bg.jpg">
+      <source src="/assets/hero-fight.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap">
+
+    <div class="ihead">
+      <span class="eyebrow">Combat &amp; Performance Training</span>
+      <h1>Intake <span class="grn">form</span></h1>
+      <p class="lead">Finding out more about you so we may be better prepared and customise our movement assessments to the individual.</p>
+      <div class="rule"></div>
+    </div>
+
+    <div class="ifm" id="ifm">
+
+      <form class="iform" id="intakeForm" novalidate>
+
+        <!-- ABOUT YOU -->
+        <fieldset class="iset">
+          <legend>About you</legend>
+          <p class="sub">The basics, so Sotir knows who he is training and how to reach you.</p>
+
+          <div class="grid2">
+            <div class="iq">
+              <label for="fullName">What is your first and last name?<span class="req">*</span></label>
+              <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Jordan Rivera">
+            </div>
+            <div class="iq">
+              <label for="email">Email<span class="req">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="iq">
+            <label for="phone">Please enter your phone number, including the country code
+              <span class="hint">WhatsApp is acceptable.</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+61 4xx xxx xxx">
+          </div>
+
+          <div class="iq">
+            <label for="emergency">Emergency contact: name and phone number</label>
+            <input id="emergency" name="emergency" type="text" placeholder="Name and number">
+          </div>
+
+          <div class="grid2">
+            <div class="iq">
+              <label for="dob">What is your date of birth?<span class="req">*</span></label>
+              <input id="dob" name="dob" type="date" required>
+            </div>
+            <div class="iq">
+              <label for="heightWeight">Height (cm), Weight (kg)</label>
+              <input id="heightWeight" name="heightWeight" type="text" placeholder="178, 74">
+            </div>
+          </div>
+
+          <div class="iq">
+            <label for="origin">Where are you from?
+              <span class="hint">Expats, where did you last come from.</span></label>
+            <input id="origin" name="origin" type="text" placeholder="City and country">
+          </div>
+        </fieldset>
+
+        <!-- HEALTH SCREEN -->
+        <fieldset class="iset">
+          <legend>Health screen</legend>
+          <p class="sub">Answer honestly. Nothing here rules you out, it tells Sotir how to start you safely.</p>
+
+          <div class="iq">
+            <span class="ql">Has your doctor ever said that you have a heart condition and that you should only perform physical activity recommended by a doctor?<span class="req">*</span></span>
+            <div class="opts" data-yesno="heartCondition"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">Do you feel pain in your chest when you perform physical activity?<span class="req">*</span></span>
+            <div class="opts" data-yesno="chestPainActive"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">In the past month, have you had chest pain when you were not performing any physical activity?<span class="req">*</span></span>
+            <div class="opts" data-yesno="chestPainRest"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">Do you lose your balance because of dizziness, or do you ever lose consciousness?<span class="req">*</span></span>
+            <div class="opts" data-yesno="dizziness"></div>
+          </div>
+          <div class="iq">
+            <label for="boneJoint">Do you have a bone or joint problem that could be made worse by a change in your physical activity?<span class="req">*</span>
+              <span class="hint">If yes, please explain. If no, write no.</span></label>
+            <textarea id="boneJoint" name="boneJoint" required placeholder="No, or tell Sotir what it is"></textarea>
+          </div>
+          <div class="iq">
+            <label for="otherReason">Do you know of any other reason why you should not engage in physical activity?<span class="req">*</span>
+              <span class="hint">If yes, please explain. If no, write no.</span></label>
+            <textarea id="otherReason" name="otherReason" required placeholder="No, or tell Sotir what it is"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- INJURY AND MEDICAL HISTORY -->
+        <fieldset class="iset">
+          <legend>Injury and medical history</legend>
+          <p class="sub">This shapes your movement assessment more than anything else on the form.</p>
+
+          <div class="iq">
+            <span class="ql">Have you ever sprained your ankle?<span class="req">*</span></span>
+            <div class="opts" data-yesno="ankleSprain"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">Have you ever had any head injuries?<span class="req">*</span></span>
+            <div class="opts" data-yesno="headInjury"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">Have you been knocked out in the past 6 months?<span class="req">*</span></span>
+            <div class="opts" data-yesno="knockedOut"></div>
+          </div>
+          <div class="iq">
+            <label for="injuries">Have you ever had any pain or injuries (ankle, knee, hip, back, shoulder, etc.)?
+              <span class="hint">If yes, please explain.</span></label>
+            <textarea id="injuries" name="injuries" placeholder="Where, when, and how it feels now"></textarea>
+          </div>
+
+          <div class="iq">
+            <span class="ql">If you have any medical exams (x ray, CT scan, MRI or ultrasound) please upload them</span>
+            <label class="drop" id="drop">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v13"/></svg>
+              <b>Tap to add files, or drag them here</b>
+              <small>Up to 10 files, 3MB in total. If your scans are larger than that, email them straight to sotirkichukov@cptmma.com</small>
+              <input id="files" type="file" multiple accept="image/*,.pdf,.doc,.docx">
+            </label>
+            <div class="filelist" id="filelist"></div>
+          </div>
+
+          <div class="iq">
+            <label for="surgeries">Have you ever had any surgeries?<span class="req">*</span>
+              <span class="hint">If yes, please explain. If no, write no.</span></label>
+            <textarea id="surgeries" name="surgeries" required placeholder="No, or what and when"></textarea>
+          </div>
+          <div class="iq">
+            <label for="chronicDisease">Has a medical doctor ever diagnosed you with a chronic disease, such as coronary heart disease, coronary artery disease, hypertension (high or low blood pressure), high cholesterol or diabetes?<span class="req">*</span>
+              <span class="hint">If yes, please explain. If no, write no.</span></label>
+            <textarea id="chronicDisease" name="chronicDisease" required placeholder="No, or tell Sotir what it is"></textarea>
+          </div>
+          <div class="iq">
+            <label for="medication">Are you currently taking regular medication?<span class="req">*</span>
+              <span class="hint">If yes, please explain. If no, write no.</span></label>
+            <textarea id="medication" name="medication" required placeholder="No, or what you take"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- LIFESTYLE -->
+        <fieldset class="iset">
+          <legend>Lifestyle</legend>
+          <p class="sub">How you spend the other 23 hours decides what your training has to undo.</p>
+
+          <div class="iq">
+            <label for="occupation">What is your current occupation?</label>
+            <input id="occupation" name="occupation" type="text" placeholder="What you do for work">
+          </div>
+          <div class="iq">
+            <span class="ql">Does your current occupation require extended periods of sitting?</span>
+            <div class="opts" data-yesno="sitting"></div>
+          </div>
+          <div class="iq">
+            <span class="ql">Does your occupation require you to wear shoes with a raised heel (dress shoes)?</span>
+            <div class="opts" data-yesno="raisedHeel"></div>
+          </div>
+
+          <div class="iq">
+            <span class="ql">Rate your sleep quality</span>
+            <div class="opts scale" id="sleepScale"></div>
+            <div class="scale-ends"><span>1, poor</span><span>10, excellent</span></div>
+          </div>
+
+          <div class="iq">
+            <label for="sleepHours">How many hours of sleep do you get per evening?</label>
+            <select id="sleepHours" name="sleepHours">
+              <option value="">Choose one</option>
+              <option>Less than 6.5 hours</option>
+              <option>6.5 to 7.5 hours</option>
+              <option>More than 7.5 hours</option>
+            </select>
+          </div>
+
+          <div class="iq">
+            <label for="rested">Do you consistently feel rested upon waking, or are you groggy and tired?</label>
+            <select id="rested" name="rested">
+              <option value="">Choose one</option>
+              <option>Groggy and tired</option>
+              <option>Well rested</option>
+              <option>Somewhere in between</option>
+            </select>
+          </div>
+
+          <div class="iq">
+            <label for="recreational">Do you partake in any recreational activities (golf, tennis, skiing, etc.)?
+              <span class="hint">If yes, please explain.</span></label>
+            <textarea id="recreational" name="recreational" placeholder="What you play, and how often"></textarea>
+          </div>
+          <div class="iq">
+            <label for="hobbies">Do you have any hobbies (reading, gardening, working on bikes, etc.)?
+              <span class="hint">If yes, please explain.</span></label>
+            <textarea id="hobbies" name="hobbies" placeholder="What you do outside training"></textarea>
+          </div>
+
+          <div class="iq">
+            <span class="ql">Are you aware of your learning style?
+              <span class="hint">Choose as many as apply.</span></span>
+            <div class="opts" data-multi="learningStyle"
+                 data-options="Visual or seeing|Auditory or listening|Kinesthetic, doing and feeling"></div>
+          </div>
+        </fieldset>
+
+        <!-- TRAINING -->
+        <fieldset class="iset">
+          <legend>Training</legend>
+          <p class="sub">What you have done before, and what you can realistically commit to.</p>
+
+          <div class="iq">
+            <span class="ql">How many exercise sessions do you prefer, or will commit to, each week?<span class="req">*</span></span>
+            <div class="opts" data-one="sessions" data-options="0 to 1|1 to 2|2 to 3"></div>
+            <div class="iq" style="margin:12px 0 0">
+              <input name="sessionsOther" type="text" placeholder="Other? Tell Sotir here">
+            </div>
+          </div>
+
+          <div class="iq">
+            <label for="ptPast">Have you ever had personal training in the past? If so, what made you stop?<span class="req">*</span></label>
+            <textarea id="ptPast" name="ptPast" required placeholder="No, or what happened"></textarea>
+          </div>
+
+          <div class="iq">
+            <span class="ql">What sort of previous experience have you had with fitness?<span class="req">*</span>
+              <span class="hint">Choose as many as apply.</span></span>
+            <div class="opts" data-multi="fitnessExperience"
+                 data-options="Weight lifting|Sports|Running|Cycling"></div>
+            <div class="iq" style="margin:12px 0 0">
+              <input name="fitnessExperienceOther" type="text" placeholder="Anything else? Tell Sotir here">
+            </div>
+          </div>
+
+          <div class="iq">
+            <span class="ql">Would you be interested in a nutrition guideline?</span>
+            <div class="opts" data-yesno="nutrition"></div>
+          </div>
+        </fieldset>
+
+        <!-- GOALS -->
+        <fieldset class="iset">
+          <legend>Goals</legend>
+          <p class="sub">The most important part of the form. Be specific.</p>
+
+          <div class="iq">
+            <span class="ql">What are your goals, or why are you interested in Combat and Performance Training?<span class="req">*</span>
+              <span class="hint">Choose as many as apply.</span></span>
+            <div class="opts" data-multi="goals"
+                 data-options="Pain or injury management|Performance based (sport, athleticism, strength, energy, keeping up with the kids)|Aesthetic or visual|General wellbeing or feeling good"></div>
+            <div class="iq" style="margin:12px 0 0">
+              <input name="goalsOther" type="text" placeholder="Another goal? Tell Sotir here">
+            </div>
+          </div>
+
+          <div class="iq">
+            <label for="why">Lastly, and most importantly, please explain why you wish to attain these goals</label>
+            <textarea id="why" name="why" style="min-height:130px" placeholder="What changes for you when you get there"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="ierr" id="ierr"></div>
+
+        <div class="isubmit">
+          <button class="btn btn-primary btn-block" type="submit" id="isend">Submit intake form</button>
+          <p class="inote">A copy of your completed form is emailed to you as a PDF the moment you submit. Your answers go straight to Sotir and are used only to prepare your movement assessment. Nothing is shared with anyone else.</p>
+        </div>
+      </form>
+
+      <div class="idone" id="idone">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h2>Form received</h2>
+        <p>Thanks, your intake form is in and Sotir has it. A PDF copy is on its way to your inbox. He will be in touch to organise your movement assessment.</p>
+        <p style="margin-top:18px"><a class="btn btn-ghost" href="/">Back to the site</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="/">
+          <img decoding="async" class="logo" src="/assets/img/cpt-logo.png" width="1100" height="227" alt="CPT MMA, Combat and Performance Training">
+        </a>
+        <p style="color:var(--soft);font-size:14.5px;margin-top:16px;max-width:34ch">The Trouble. ONE Championship veteran, Max Fight champion, and founder of CPT in Melbourne.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/ProFighterAndCoach" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.2h2.76l.41-3.2H13.5V7.55c0-.93.26-1.56 1.59-1.56h1.7V3.13A22.7 22.7 0 0 0 14.31 3c-2.46 0-4.14 1.5-4.14 4.25V9.6H7.4v3.2h2.77V21h3.33z"/></svg></a>
+          <a href="https://www.instagram.com/sotir_kichukov/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.4"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@sotir_kichukov" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3.02v12.2a2.36 2.36 0 1 1-1.9-2.31V8.83a5.6 5.6 0 1 0 4.93 5.56V8.9a6.66 6.66 0 0 0 3.87 1.24V7.12A3.85 3.85 0 0 1 16.5 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/#coach">The coach</a>
+        <a href="/#training">Training</a>
+        <a href="/#canine">Canine</a>
+        <a href="/#membership">Membership</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/blog">Journal</a>
+      </div>
+      <div>
+        <h4>Train</h4>
+        <a href="/intake">Intake form</a>
+        <a href="/#apply">Register interest</a>
+        <a href="/#membership">Fighter's path</a>
+        <a href="/#apply">Private coaching</a>
+        <a href="/canine">Canine personal training</a>
+        <a href="/magnesium">Anchialo Magnesium</a>
+      </div>
+      <div class="contact">
+        <h4>Get in touch</h4>
+        <a class="footgym" href="https://immersionmma.com.au/" target="_blank" rel="noopener">
+          <img loading="lazy" decoding="async" src="/assets/img/immersion-mma.png" width="710" height="136" alt="Immersion Mixed Martial Arts, Ringwood">
+        </a>
+        <p>60 Charter Street<br>Ringwood, Victoria</p>
+        <div class="cicons">
+          <a class="cicon" href="tel:+61423269586" aria-label="Call Sotir" title="Call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          </a>
+          <a class="cicon" href="mailto:sotirkichukov@cptmma.com" aria-label="Email Sotir" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          </a>
+        </div>
+        <a class="btn btn-primary" href="/#apply" style="margin-top:12px">Register interest</a>
+      </div>
+    </div>
+    <div class="footbar">
+      <span>© 2026 CPT MMA · Combat &amp; Performance Training</span>
+      <span style="color:#787e91;font-size:12.5px;letter-spacing:0.02em;">Designed for High Performance · Melbourne, VIC</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/config.js"></script>
+<script src="/assets/sk.js?v=12" defer></script>
+<script>
+(function () {
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ---------- build the pill groups from data attributes ---------- */
+  function pill(type, name, label) {
+    var l = document.createElement('label');
+    l.className = 'opt';
+    var i = document.createElement('input');
+    i.type = type; i.name = name; i.value = label;
+    var s = document.createElement('span');
+    s.textContent = label;
+    l.appendChild(i); l.appendChild(s);
+    return l;
+  }
+  $$('[data-yesno]').forEach(function (box) {
+    ['Yes', 'No'].forEach(function (v) { box.appendChild(pill('radio', box.dataset.yesno, v)); });
+  });
+  $$('[data-one]').forEach(function (box) {
+    box.dataset.options.split('|').forEach(function (v) { box.appendChild(pill('radio', box.dataset.one, v)); });
+  });
+  $$('[data-multi]').forEach(function (box) {
+    box.dataset.options.split('|').forEach(function (v) { box.appendChild(pill('checkbox', box.dataset.multi, v)); });
+  });
+  var scale = $('#sleepScale');
+  for (var n = 1; n <= 10; n++) scale.appendChild(pill('radio', 'sleepQuality', String(n)));
+
+  /* ---------- file picking ---------- */
+  var MAX_TOTAL = 3 * 1024 * 1024;
+  var picked = [];
+  var input = $('#files'), list = $('#filelist'), drop = $('#drop');
+
+  function renderFiles() {
+    list.innerHTML = '';
+    picked.forEach(function (f, idx) {
+      var row = document.createElement('div');
+      row.className = 'filerow';
+      var b = document.createElement('b'); b.textContent = f.name;
+      var kb = document.createElement('span'); kb.textContent = Math.round(f.size / 1024) + ' KB';
+      var x = document.createElement('button');
+      x.type = 'button'; x.innerHTML = '&times;'; x.setAttribute('aria-label', 'Remove ' + f.name);
+      x.onclick = function () { picked.splice(idx, 1); renderFiles(); };
+      row.appendChild(b); row.appendChild(kb); row.appendChild(x);
+      list.appendChild(row);
+    });
+  }
+  input.addEventListener('change', function () {
+    Array.prototype.slice.call(input.files).forEach(function (f) {
+      if (picked.length < 10) picked.push(f);
+    });
+    input.value = '';
+    renderFiles();
+  });
+  ['dragenter', 'dragover'].forEach(function (e) {
+    drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave', 'drop'].forEach(function (e) {
+    drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.remove('over'); });
+  });
+  drop.addEventListener('drop', function (ev) {
+    Array.prototype.slice.call(ev.dataTransfer.files).forEach(function (f) {
+      if (picked.length < 10) picked.push(f);
+    });
+    renderFiles();
+  });
+
+  function readAsBase64(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(String(r.result).split(',')[1] || ''); };
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  /* ---------- submit ---------- */
+  var form = $('#intakeForm'), err = $('#ierr'), btn = $('#isend'), wrap = $('#ifm');
+
+  function fail(msg) {
+    err.textContent = msg;
+    err.classList.add('on');
+    err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.classList.remove('on');
+
+    var answers = {};
+    $$('input,select,textarea', form).forEach(function (x) {
+      if (!x.name) return;
+      if (x.type === 'radio') { if (x.checked) answers[x.name] = x.value; return; }
+      if (x.type === 'checkbox') {
+        if (x.checked) { (answers[x.name] = answers[x.name] || []).push(x.value); }
+        return;
+      }
+      if (String(x.value).trim()) answers[x.name] = String(x.value).trim();
+    });
+
+    /* fold the free text "other" boxes into their group */
+    ['fitnessExperience', 'goals'].forEach(function (k) {
+      var other = answers[k + 'Other'];
+      if (other) { answers[k] = (answers[k] || []).concat([other]); delete answers[k + 'Other']; }
+    });
+    /* sessions is single choice, so "other" either fills it or annotates it */
+    if (answers.sessionsOther) {
+      answers.sessions = answers.sessions
+        ? answers.sessions + ' (' + answers.sessionsOther + ')'
+        : answers.sessionsOther;
+      delete answers.sessionsOther;
+    }
+
+    /* required checks, in page order so the message points somewhere useful */
+    var required = [
+      ['fullName', 'your name'], ['email', 'your email'], ['dob', 'your date of birth'],
+      ['heartCondition', 'the heart condition question'],
+      ['chestPainActive', 'the chest pain during activity question'],
+      ['chestPainRest', 'the chest pain at rest question'],
+      ['dizziness', 'the dizziness question'],
+      ['boneJoint', 'the bone or joint question'],
+      ['otherReason', 'the other reasons question'],
+      ['ankleSprain', 'the ankle sprain question'],
+      ['headInjury', 'the head injury question'],
+      ['knockedOut', 'the knocked out question'],
+      ['surgeries', 'the surgeries question'],
+      ['chronicDisease', 'the chronic disease question'],
+      ['medication', 'the medication question'],
+      ['sessions', 'how many sessions a week'],
+      ['ptPast', 'the personal training question'],
+      ['fitnessExperience', 'your previous fitness experience'],
+      ['goals', 'your goals']
+    ];
+    for (var i = 0; i < required.length; i++) {
+      var v = answers[required[i][0]];
+      if (!v || (Array.isArray(v) && !v.length)) return fail('Please answer ' + required[i][1] + '.');
+    }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(answers.email)) return fail('Please check your email address.');
+
+    var total = picked.reduce(function (a, f) { return a + f.size; }, 0);
+    if (total > MAX_TOTAL) {
+      return fail('Those files add up to ' + Math.round(total / 1024 / 1024 * 10) / 10
+        + 'MB, which is over the 3MB limit. Remove a few and email the rest to sotirkichukov@cptmma.com');
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    Promise.all(picked.map(function (f) {
+      return readAsBase64(f).then(function (data) {
+        return { name: f.name, type: f.type, data: data };
+      });
+    })).then(function (files) {
+      return var cfg = window.CPT_CONFIG || { leadEmail: 'sotirkichukov@cptmma.com' };
+      var submitEndpoint = 'https://formsubmit.co/ajax/' + encodeURIComponent(cfg.leadEmail || 'sotirkichukov@cptmma.com');
+      var intakePayload = {
+        _subject: 'New CPT MMA Client Intake: ' + (answers.fullName || 'Athlete'),
+        _template: 'table',
+        intake_type: 'Athlete Detailed Questionnaire'
+      };
+      for (var k in answers) {
+        intakePayload[k] = Array.isArray(answers[k]) ? answers[k].join(', ') : answers[k];
+      }
+      fetch(submitEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(intakePayload)
+      });
+    }).then(function (r) {
+      return r.json().catch(function () { return { ok: false }; });
+    }).then(function (j) {
+      if (!j || !j.ok) throw new Error((j && j.error) || 'failed');
+      /* The shared Scalus confirmation swaps the contents inside the form's own
+         box. Fall back to the old panel only if that layer is missing. */
+      if (window.ScalusSuccess) { window.ScalusSuccess.show(form); return; }
+      wrap.classList.add('sent');
+      $('#idone').classList.add('on');
+      window.scrollTo({ top: wrap.offsetTop - 120, behavior: 'smooth' });
+    }).catch(function (e) {
+      btn.disabled = false;
+      btn.textContent = 'Submit intake form';
+      if (String(e.message) === 'files_too_large') {
+        return fail('Those files are too large to send. Remove a few and email the rest to sotirkichukov@cptmma.com');
+      }
+      fail('Something went wrong sending your form. Please try again, or email sotirkichukov@cptmma.com');
+    });
+  });
+})();
+</script>
+
+<!-- sc:3f19468840b8b6ebaf -->
+
+<script src="/assets/success.js" defer></script>
+
+</body>
+</html>
